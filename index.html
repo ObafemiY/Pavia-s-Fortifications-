@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lombardy Cultural Data</title>
+    <style>
+        /* General styles */
+       /* General styles */
+body {
+    margin: 0;
+    font-family: Boing;
+    color: white;
+    background-color: #323130;
+    line-height: 2;
+}
+
+/* Main section styles */
+main {
+    padding: 40px; /* Adds padding to the main body content only */
+         }
+
+        /* Header styles */
+        header {
+            font-family: Georgia, serif;
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+           
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-family: Georgia (serif);
+            color: white;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-family: Trebuchet MS (sans-serif);
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        /* Main section styles */
+        .intro, .benefits, .highlights, .download {
+            text-align: center;
+            padding: 5px 10px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .card {
+            background-color: #000000;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            width: 30%;
+            min-width: 250px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 20px 0;
+            background-color: white;
+            color: #8b0000;
+            border-radius: 10px;
+            text-decoration: none;
+            
+            /* Additional styles for .download-btn */
+               padding: 2em;
+            background: #e60000; /* Red background for CTA */
+            color: #fff;
+            border-radius: 40px;
+            margin-bottom: 1em;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #e0e0e0;
+            color: black;
+            padding: 50px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 50;
+            display: flex;
+            justify-content: Right;
+            gap: 20px;
+        }
+
+        footer a {
+            text-decoration: none;
+            justify-content: Center;
+            color: black;
+        }
+         /* Additional styles for the language selector */
+        .language-selector {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+        }
+        .language-selector button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            font-size: 9px;
+            cursor: Pointer;
+        }
+        /* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;  /* Stack menu items */
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Reduce heading size for better fit */
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: column; /* Stack cards instead of row layout */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Make cards take full width */
+    }
+
+    .download-btn {
+        width: 80%;  /* Ensure download button is fully visible */
+        text-align: center;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .language-selector {
+        position: static; /* Prevent overlap */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer ul li {
+        margin-bottom: 10px;
+    }
+}
+.intro {
+    text-align: Justify;
+}
+.download-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 30px; /* Adds space between buttons */
+    flex-wrap: wrap; /* Prevents overflow on smaller screens */
+}
+
+.download-btn {
+    flex: 1; /* Ensures buttons grow equally */
+    max-width: 200px; /* Prevents buttons from getting too wide */
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+<!-- Language Selector -->
+<div class="language-selector">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('it')">Italian</button>
+</div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Project</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+           <h1>QUESTIONNAIRE<br> ON THE <br> HISTORICAL AND CULTURAL SIGNIFICANCE <br> OF PAVIA'S FORTIFICATIONS.</h1>
+            <p data-lang-en="A Master's Thesis Research By Obafemi Yusuf. O." 
+       data-lang-it="Ricerca per tesi di laurea magistrale di Obafemi Yusuf. O.">
+        A Master's Thesis Research By Obafemi Yusuf. O. <br> University of Pavia</p>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            
+            <h2 data-lang-en="Be a part of this project!!" 
+            data-lang-it="Diventa parte di questo progetto!!">
+            Be a part of this project!!</h2>
+        <p data-lang-en="Thank you for participating in this Academic research! This questionnaire is part of a study on the Historical evolution, preservation, and cultural relevance of Pavias defensive walls and gates."
+           data-lang-it="Grazie per aver partecipato a questa ricerca accademica! Questo questionario fa parte di uno studio su Evoluzione storica, conservazione e rilevanza culturale delle mura e delle porte difensive di Pavia.">
+           Thank you for participating in this Academic research! This questionnaire is part of a study on the Historical evolution, preservation, and cultural relevance of Pavias defensive walls and gates.</p>
+       
+        <p  data-lang-en="The collected data will contribute to a deeper understanding of public perceptions, preservation standards, and the potential for urban regeneration and tourism development linked to these historic structures."
+           data-lang-it="I dati raccolti contribuiranno a una comprensione più approfondita delle percezioni pubbliche, degli standard di conservazione e del potenziale di rigenerazione urbana e sviluppo turistico legato a queste strutture storiche.">
+         The collected data will contribute to a deeper understanding of public perceptions, preservation standards, and the potential for urban regeneration and tourism development linked to these historic structures.
+ </p>
+        
+        <p data-lang-en="The questionnaire should take approximately 3-4 minutes to complete."
+           data-lang-it="Il questionario dovrebbe richiedere circa 3-4 minuti per essere completato.">
+         The questionnaire should take approximately 3-4 minutes to complete.
+</p>
+        
+        <p  data-lang-en="DISCLAIMER!! : Your responses are invaluable, and they will be used strictly for academic purposes ONLY. Your personal data will not be collected, and all information provided will remain confidential and anonymous. This disclaimer is in compliance with GDPR EU 2016/679."
+           data-lang-it="DISCLAIMER!! : Le tue risposte sono inestimabili e saranno utilizzate ESCLUSIVAMENTE per scopi accademici. I tuoi dati personali non saranno raccolti e tutte le informazioni fornite rimarranno riservate e anonime. Questa esclusione di responsabilità è conforme al GDPR UE 2016/679.">
+        DISCLAIMER!! : Your responses are invaluable, and they will be used strictly for academic purposes ONLY. Your personal data will not be collected,  and all information provided will remain confidential and anonymous. This disclaimer is in compliance with GDPR EU 2016/679.
+</p>
+        
+    </section>
+
+        <div class="download-container">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScLG7CRXASUBrOISbaRye9D_fvP37vzkOWFK_STOvTHr_LJtw/viewform?usp=header" 
+       class="download-btn">
+        ENGLISH
+    </a>
+    
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScD1OoLglHhdSaexJEKv_FnNN3Y7VoBzw64ec6xYa-c4C9TJw/viewform?usp=header" 
+       class="download-btn">
+        ITALIAN 
+    </a>
+</div>
+
+    </a>
+    <p data-lang-en="NOTE: This Questionnaire is completely open for use."
+       data-lang-it="NOTA: Questo questionario è completamente gratuito.">
+        NOTE: This Questionnaire is completely open for use.
+    </p>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h2>UNIVERSITY   OF   PAVIA</h2>
+            <p>© 2025 - The Ancient Mediterranean World. History, Archeology and Art.</p>
+            <p>By Obafemi Yusuf Olatunji</p>
+            <p>All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+<script>
+    function setLanguage(lang) {
+        const elements = document.querySelectorAll("[data-lang-en]");
+        elements.forEach(el => {
+            const text = el.getAttribute(`data-lang-${lang}`);
+            if (text) {
+                el.textContent = text;
+            }
+        });
+    }
+</script>
+</body>
+</html>
