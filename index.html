@@ -190,7 +190,22 @@ main {
     max-width: 200px; /* Prevents buttons from getting too wide */
     text-align: center;
 }
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Ensures buttons stay in a row */
+        justify-content: center; /* Centers them */
+        gap: 15px; /* Adds space between them */
+    }
 
+    nav ul li {
+        display: inline-block;
+    }
+
+    nav a {
+        font-size: 14px; /* Reduces the font size */
+        padding: 8px 12px; /* Adjusts spacing for better fit */
+    }
+}
     </style>
 </head>
 <body>
